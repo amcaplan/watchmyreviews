@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: :show do
+        with_options only: :index do |index|
+          index.resources :tweets
+          index.resources :fb_posts
+          index.resources :yellowpages_reviews
+          index.resources :yelp_reviews
+          index.resources :foursquare
+        end
+      end
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
