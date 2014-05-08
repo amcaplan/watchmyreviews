@@ -60,7 +60,6 @@ end
 
 gem "bootstrap-sass", "~> 3.1.1"
 
-gem "jbuilder"
 gem "sentimental"
 
 gem "dotenv-rails"
