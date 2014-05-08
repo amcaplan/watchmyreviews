@@ -54,4 +54,18 @@ group :production do
   gem "rails_12factor"
 end
 
+group :development do
+  gem "rails-erd"
+end
+
 gem "bootstrap-sass", "~> 3.1.1"
+
+gem "sentimental"
+
+gem "dotenv-rails"
+
+# APIs
+gem "omniauth"
+gem "omniauth-facebook", "1.4.0"
+gem "twitter"
+gem "fb_graph"
