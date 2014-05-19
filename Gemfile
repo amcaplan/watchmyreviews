@@ -70,3 +70,7 @@ gem "omniauth-facebook", "1.4.0"
 gem "fb_graph"
 gem "omniauth-twitter"
 gem "twitter"
+
+# Ember
+gem 'ember-rails'
+gem 'ember-source', '1.5.1.1'
