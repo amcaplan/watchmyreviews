@@ -11,17 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508190051) do
+ActiveRecord::Schema.define(version: 20140514211228) do
 
   create_table "users", force: true do |t|
-    t.string   "uid"
+    t.string   "fb_uid"
     t.string   "name"
-    t.string   "provider",         default: "facebook"
-    t.string   "oauth_expires_at"
-    t.string   "oauth_token"
+    t.string   "provider",            default: "facebook"
+    t.string   "fb_oauth_expires_at"
+    t.string   "fb_oauth_token"
     t.string   "twitter_handle"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "twitter_uid"
+    t.string   "twitter_oauth_token"
+    t.string   "twitter_secret"
   end
 
 end

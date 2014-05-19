@@ -67,5 +67,6 @@ gem "dotenv-rails"
 # APIs
 gem "omniauth"
 gem "omniauth-facebook", "1.4.0"
-gem "twitter"
 gem "fb_graph"
+gem "omniauth-twitter"
+gem "twitter"

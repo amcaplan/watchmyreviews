@@ -1,8 +1,8 @@
-<div id="user-widget">
-  <% if current_user && current_user.fb_uid %>
+<div id="twitter-widget">
+  <% if current_user && current_user.twitter_uid %>
     Welcome <strong><%= current_user.name %></strong>!
     <%= link_to "Sign out", signout_path, id: "sign_out" %>
   <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
   <% end %>
 </div>
