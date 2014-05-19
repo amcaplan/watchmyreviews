@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
         user.save!
       end
     elsif auth.provider == 'twitter'
-      binding.pry
       (current_user || where(twitter_uid: auth.uid).first_or_initialize).tap do |user|
         user.twitter_uid = auth.uid
         user.name ||= auth.info.name
