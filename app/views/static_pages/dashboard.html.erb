@@ -1,7 +1,15 @@
 <script type="text/x-handlebars" data-template-name="application">
   <%= render partial: 'layouts/header' %>
   <h2>Custom Dashboard for {{user.name}}</h2>
-  {{partial "sidebar"}}
-  {{partial "main"}}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-2">
+        {{partial "sidebar"}}
+      </div>
+      <div class="col-xs-12 col-sm-10">
+        {{partial "main"}}
+      </div>
+    </div>
+  </div>
 </script>
 <%= javascript_include_tag 'application' %>
