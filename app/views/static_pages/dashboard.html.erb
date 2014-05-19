@@ -1,0 +1,7 @@
+<script type="text/x-handlebars" data-template-name="application">
+  <%= render partial: 'layouts/header' %>
+  <h2>Custom Dashboard for {{user.name}}</h2>
+  {{partial "sidebar"}}
+  {{partial "main"}}
+</script>
+<%= javascript_include_tag 'application' %>
