@@ -1,7 +1,13 @@
-Current sentiment: {{averageSentiment}}
-{{#each}}
-  <p>
-    <blockquote>{{text}}<br>
-    - {{userName}} (@{{userHandle}})</blockquote>
-  </p>
-{{/each}}
+Current Average Sentiment: {{averageSentiment}} <span style="background-color: yellow">{{sentimentSmiley}}</span>
+<table class="table">
+  <tbody>
+  {{#each}}
+    <tr>
+      <td {{bind-attr class="sentimentClass"}}>
+        {{text}}<br>
+        - {{userName}} (<a {{bind-attr href="userURL"}} target="_blank">@{{userHandle}}</a>)
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
