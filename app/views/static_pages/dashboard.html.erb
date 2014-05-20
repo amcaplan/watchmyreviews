@@ -4,10 +4,17 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-2">
-        {{partial "sidebar"}}
+        <nav>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">Summary</a></li>
+            <li>{{#link-to "tweets"}}Twitter{{/link-to}}</li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </nav>
       </div>
       <div class="col-xs-12 col-sm-10">
-        {{partial "main"}}
+        {{outlet}}
       </div>
     </div>
   </div>
