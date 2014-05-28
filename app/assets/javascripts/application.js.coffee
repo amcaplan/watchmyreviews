@@ -10,5 +10,3 @@
 
 # for more details see: http://emberjs.com/guides/application/
 window.Watchmyreviews = Ember.Application.create()
-
-Watchmyreviews.ApplicationAdapter = DS.FixtureAdapter

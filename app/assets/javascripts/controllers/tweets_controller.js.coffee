@@ -1,15 +1,17 @@
 Watchmyreviews.TweetsController = Ember.ArrayController.extend({
   itemController: 'tweet'
+
   averageSentiment: (->
-    sentiments = this.getEach('sentiment')
+    sentiments = @getEach('sentiment')
     sum = sentiments.reduce((a, b)-> a + b)
-    Math.round(sum / sentiments.length * 10) / 10
+    Math.round(sum / sentiments.length * 5) + 2.5
   ).property('tweets.@each.sentiment')
+  
   sentimentSmiley: (->
-    sentiment = this.get('averageSentiment')
-    if sentiment > 0.2
+    sentiment = @get('averageSentiment')
+    if sentiment >= 4
       ":-)"
-    else if sentiment < -0.2
+    else if sentiment <= 2
       ":-("
     else
       ":-|"
