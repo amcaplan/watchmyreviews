@@ -4,10 +4,8 @@ class API::V1::APIController < ApplicationController
 
   protected
     def verify_user
-      if params[:user_id] && session[:user_id].to_s != params[:user_id]
-        render json: "No searching for another user!", status: :unauthorized
-      elsif !params[:user_id]
-        render json: "No user specified", status: :unauthorized
+      unless session[:user_id]
+        render json: "Unauthorized Request", status: :unauthorized
       end
     end
 end

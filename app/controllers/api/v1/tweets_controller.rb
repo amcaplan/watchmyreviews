@@ -6,6 +6,8 @@ class API::V1::TweetsController < API::V1::APIController
       new_tweets = client.search(current_user.twitter_handle, count: 45).entries
       @tweets += tweets_not_from_user(new_tweets, current_user).take(20)
     end
+    @tweets = @tweets.uniq
+    render json: ActiveModel::ArraySerializer.new(@tweets, each_serializer: TweetSerializer)
   end
 
   private
